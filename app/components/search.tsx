@@ -13,28 +13,30 @@ export default function Search({ onChange }) {
     onChange(service)
   }
   return (
-    <div className="main-container">
-      <form className="" onSubmit={makeApiCall}>
-        <div className="sub-container flex">
-          <div className="departing-from-container">
-            <label className="" htmlFor="depCRS">
-              Departing From
-            </label>
-            <input className="" id="depCRS" type="text" placeholder="Station name or code" />
+    <div className="main-container bg-white p-5">
+      <div className="sub-container text-base font-semibold whitespace-nowrap dark:text-white">
+        <form className="w-4/6 bg-darkBG p-5 rounded-full m-auto" onSubmit={makeApiCall}>
+          <div className="flex departing-from-container basis-2/5 bg-white rounded-full">
+            <div className="m-auto border-r-4 border-darkBG">
+              <label className="pr-2" htmlFor="depCRS">
+                Departing From:
+              </label>
+              <input className="" id="depCRS" type="text" placeholder="Station name or code" />
+            </div>
+            <div className="flex going-to-container basis-2/5 bg-white rounded-full">
+              <div className="m-auto border-r-4 border-darkBG">
+                <label className="pr-2" htmlFor="arvCRS">
+                  Going to (Optional):
+                </label>
+                <input className="" id="arvCRS" type="text" placeholder="Station name or code" />
+              </div>
+            </div>
+                <button className="search-Container bg-white rounded-" type="submit">
+                  Search
+                </button>
           </div>
-          <div className="going-to-container">
-            <label className="" htmlFor="arvCRS">
-              Going to (Optional)
-            </label>
-            <input className="" id="arvCRS" type="text" placeholder="Station name or code" />
-          </div>
-          <div className="search-Container">
-            <button className="" type="submit">
-              Search
-            </button>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   )
 }
