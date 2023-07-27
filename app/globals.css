@@ -18,10 +18,39 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white;
+  height: 100vh;
+}
+
+.trainLine1{
+  background-color: rgb(49, 39, 131);
+  width: 5%;
+  height: 1rem;
+  top: 20%;
+  left: 0%;
+  position: absolute;
+}
+.trianLine2{
+  background-color: rgb(252, 194, 72);
+  width: 5%;
+  height: 1rem;
+  top: 40%;
+  left: 0%;
+  position: absolute;
+}
+.trainLine3{
+  background-color: rgb(149, 27, 129);
+  width: 5%;
+  height: 1rem;
+  top: 60%;
+  left: 0%;
+  position: absolute;
+}
+.trainLine4{
+  background-color: rgb(118, 184, 42);
+  width: 5%;
+  height: 1rem;
+  top: 80%;
+  left: 0%;
+  position: absolute;
 }

@@ -14,7 +14,7 @@ export default function Search({ onChange }) {
     onChange(service)
   }
   return (
-    <div className="main-container bg-white p-1 md:p-5">
+    <div className="main-container p-1 md:p-5">
       <div className="content-container w-11/12 rounded-lg m-auto text-lg bg-searchBG">
         <form className="" onSubmit={makeApiCall}>
           <div className="p-2 relative">
