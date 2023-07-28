@@ -1,8 +1,4 @@
-'use client'
-import Image from "next/image";
-import { useState } from "react";
 export default function Search({ onChange }) {
-  const [service, setService] = useState();
   const makeApiCall = async (event) => {
     event.preventDefault()
     const data = {
@@ -10,8 +6,7 @@ export default function Search({ onChange }) {
     }
     const JSONdata = JSON.stringify(data)
     const response = await fetch('/api/getDepartures', { method: 'POST', body: JSONdata })
-    setService(await response.json())
-    onChange(service)
+    onChange(await response.json())
   }
   return (
     <div className="main-container p-1 md:p-5">
@@ -30,11 +25,11 @@ export default function Search({ onChange }) {
             </div>
             <div className="flex h-0">
             <div className="top-10 w-14 h-14 absolute right-26px bg-white rounded-full border border-searchGrey"></div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className=" w-12 h-12 absolute top-11 right-5 text-searchGrey">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className=" w-12 h-12 absolute top-11 right-5 text-searchGrey">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18" />
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className=" w-12 h-12  absolute top-11 right-10 text-searchGrey">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className=" w-12 h-12  absolute top-11 right-10 text-searchGrey">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
             </svg>
             </div>
             <div className="w-99 m-auto py-1">
@@ -53,8 +48,8 @@ export default function Search({ onChange }) {
                   <button className="h-full flex-1 text-oangeColour font-bold text-left" type="submit">
                     Show Live Trains
                   </button>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="h-full flex-none w-6 h-6 text-oangeColour ">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="h-full flex-none w-6 h-6 text-oangeColour ">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                   </svg>
 
                 </div>
