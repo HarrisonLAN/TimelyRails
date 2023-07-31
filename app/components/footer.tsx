@@ -2,7 +2,7 @@
 export default function footer() {
 
     return (
-        <footer className="fixed bottom-2 w-full">
+        <footer className="bottom-2 w-full">
             <div className="w-56 grid grid-cols-3 gap-x-0.5 content-center m-auto">
                 <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                     <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
