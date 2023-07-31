@@ -25,7 +25,9 @@ module.exports = {
         'mainColourL2': '#00a3f9',
         'mainColourL3': '#14aeff',
         'oangeColour' : '	#f87338',
-        'searchGrey':'rgb(100, 115, 134)'
+        'searchGrey':'rgb(100, 115, 134)',
+        'searchBG':'rgb(246, 248, 250)'
+        
       },
       width: {
         '99': '99%',

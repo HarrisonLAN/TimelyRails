@@ -12,7 +12,7 @@ import Layout from './layout';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [services, setservices] = useState();
-  return (
+  return (  
     <Layout {...pageProps}>
       <Navbar />
       <Hero />

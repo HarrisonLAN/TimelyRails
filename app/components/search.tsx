@@ -9,7 +9,7 @@ export default function Search({ onChange }) {
     onChange(await response.json())
   }
   return (
-    <div className="main-container p-1 md:p-5">
+    <div className="main-container p-1 md:p-5 bg-searchBG border-b-2 border-searchGrey">
       <div className="content-container w-11/12 rounded-lg m-auto text-lg bg-searchBG">
         <form className="" onSubmit={makeApiCall}>
           <div className="p-2 relative">
