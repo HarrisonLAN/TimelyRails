@@ -39,7 +39,7 @@ export default function serviceDetails(serviceID) {
                             </svg>
                         </div>
                     </div>
-                    {showMe ? (<div className="">
+                    <div className={`flex ${showMe ? "block" : "hidden"}`}>
                         {serviceID.data.subsequentCallingPoints.callingPointList.callingPoint.map((callingPoint) => (
                             <div className="flex m-auto w-99 px-1 relative">
                                 <div className="px-1 w-2/12">
@@ -52,7 +52,7 @@ export default function serviceDetails(serviceID) {
                                 <div className="px-1 w-10/12 m-auto text-left"><p>{callingPoint.locationName}</p></div>
                             </div>
                         ))}
-                    </div>) : (<></>)}
+                    </div>
                 </div>
             </li >
         </>
