@@ -42,8 +42,8 @@ export default function Search({ onChange }) {
                 </div>
               </div>
             </div>
-            <div className="w-99 py-1">
-              <div className=" ">
+            <div className="w-99 py-1 m-auto">
+              <div className="">
                 <div className="flex items-end bg-searchBTN h-52 rounded-lg p-1 border border-searchGrey">
                   <button className="h-full flex-1 text-oangeColour font-bold text-left" type="submit">
                     Show Live Trains
