@@ -1,4 +1,5 @@
 import { useState } from "react";
+import getDepBoardWithDetails from "../model/services";
 export default function serviceDetails(serviceID) {
     const [showMe, setShowMe] = useState(false);
     function toggle() {
@@ -39,7 +40,7 @@ export default function serviceDetails(serviceID) {
                             </svg>
                         </div>
                     </div>
-                    <div className={`flex ${showMe ? "block" : "hidden"}`}>
+                    {showMe ? (<div className="">
                         {serviceID.data.subsequentCallingPoints.callingPointList.callingPoint.map((callingPoint) => (
                             <div className="flex m-auto w-99 px-1 relative">
                                 <div className="px-1 w-2/12">
@@ -49,10 +50,10 @@ export default function serviceDetails(serviceID) {
                                 <div className="relative">
                                 <div className="w-1 h-full bg-black" />
                                 </div>
-                                <div className="px-1 w-10/12 m-auto text-left"><p>{callingPoint.locationName}</p></div>
+                                <div className="px-1 w-10/12 m-auto text-left   "><p>{callingPoint.locationName}</p></div>
                             </div>
                         ))}
-                    </div>
+                    </div>) : (<></>)}
                 </div>
             </li >
         </>
